@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+:root {
+  /* ========================================
+     NOVA — WARM & COZY DESIGN TOKENS
+     ======================================== */
+
+  /* ---------- COLORS ---------- */
+
+  /* Main page background */
+  --color-background: #f7f3ed;
+
+  /* Cards / elevated surfaces */
+  --color-surface: #fffdf9;
+
+  /* Slightly darker surface */
+  --color-surface-soft: #efe8de;
+
+  /* Main text */
+  --color-foreground: #29231e;
+
+  /* Secondary text */
+  --color-muted: #756b61;
+
+  /* Very subtle text */
+  --color-subtle: #9b9187;
+
+  /* Borders */
+  --color-border: #e5ddd2;
+
+  /* Brand accent */
+  --color-primary: #a86445;
+
+  /* Dark version of brand accent */
+  --color-primary-dark: #864d35;
+
+  /* Light accent background */
+  --color-primary-soft: #ead8ca;
+
+  /* Success */
+  --color-success: #68785d;
+
+  /* Error */
+  --color-error: #a65348;
+
+
+  /* ---------- TYPOGRAPHY ---------- */
+
+  --font-heading: var(--font-playfair), serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;       /* 12px */
+  --text-sm: 0.875rem;      /* 14px */
+  --text-base: 1rem;        /* 16px */
+  --text-lg: 1.125rem;      /* 18px */
+  --text-xl: 1.25rem;       /* 20px */
+  --text-2xl: 1.5rem;       /* 24px */
+  --text-3xl: 2rem;         /* 32px */
+  --text-4xl: 2.5rem;       /* 40px */
+  --text-5xl: 3rem;         /* 48px */
+  --text-6xl: 4rem;         /* 64px */
+
+  /* Line heights */
+  --leading-tight: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+
+  /* ---------- SPACING ---------- */
+
+  --space-1: 0.25rem;       /* 4px */
+  --space-2: 0.5rem;        /* 8px */
+  --space-3: 0.75rem;       /* 12px */
+  --space-4: 1rem;           /* 16px */
+  --space-5: 1.25rem;        /* 20px */
+  --space-6: 1.5rem;         /* 24px */
+  --space-8: 2rem;           /* 32px */
+  --space-10: 2.5rem;        /* 40px */
+  --space-12: 3rem;          /* 48px */
+  --space-16: 4rem;          /* 64px */
+  --space-20: 5rem;          /* 80px */
+  --space-24: 6rem;          /* 96px */
+  --space-32: 8rem;          /* 128px */
+
+
+  /* ---------- BORDER RADIUS ---------- */
+
+  --radius-sm: 0.5rem;       /* 8px */
+  --radius-md: 0.75rem;      /* 12px */
+  --radius-lg: 1rem;         /* 16px */
+  --radius-xl: 1.25rem;      /* 20px */
+  --radius-2xl: 1.5rem;      /* 24px */
+
+  /* Pills / fully rounded buttons */
+  --radius-full: 9999px;
+
+
+  /* ---------- SHADOWS ---------- */
+
+  --shadow-soft:
+    0 4px 20px rgba(70, 50, 35, 0.06);
+
+  --shadow-card:
+    0 8px 30px rgba(70, 50, 35, 0.08);
+
+  --shadow-floating:
+    0 15px 40px rgba(70, 50, 35, 0.12);
+
+
+  /* ---------- LAYOUT ---------- */
+
+  --container-width: 1280px;
+
+  --page-padding-mobile: 1rem;
+  --page-padding-tablet: 2rem;
+  --page-padding-desktop: 3rem;
+
+
+  /* ---------- TRANSITIONS ---------- */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-foreground);
+
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: var(--leading-heading);
+
+  letter-spacing: -0.02em;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
