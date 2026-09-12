@@ -1,6 +1,6 @@
 "use client";
 
-import { ProductCard } from "@/types/products.type";
+import type { ProductType } from "@/types/products.type";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function ProductCard({
   product,
 }: {
-  product: ProductCard;
+  product: ProductType;
 }) {
   const {
     addToCart,
@@ -24,7 +24,6 @@ export default function ProductCard({
 
   const handleAdd = () => {
     addToCart(product);
-
     setShowAdded(true);
 
     setTimeout(() => {
@@ -43,12 +42,17 @@ export default function ProductCard({
           bg-(--color-surface)
         "
       >
-        <Link href={`/products/${product.id}`}>
+        <Link
+          href={`/products/${product.id}`}
+          className="absolute inset-0"
+          draggable={false}
+        >
           <Image
             src={product.image}
             alt={product.name}
             fill
             className="
+              pointer-events-none
               object-cover
               transition
               duration-500
@@ -62,12 +66,19 @@ export default function ProductCard({
           />
         </Link>
 
-        {/* Cart control */}
-        <div className="absolute bottom-3 right-3 z-10">
+        <div className="pointer-events-auto absolute bottom-3 right-3 z-10">
           {quantity === 0 ? (
             <button
-              onClick={handleAdd}
+              type="button"
+              aria-label={`Add ${product.name} to cart`}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleAdd();
+              }}
               className="
+                touch-manipulation
+                cursor-pointer
                 rounded-full
                 bg-white/95
                 px-4
@@ -100,7 +111,12 @@ export default function ProductCard({
               "
             >
               <button
-                onClick={() => decreaseQuantity(product.id)}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  decreaseQuantity(product.id);
+                }}
                 className="
                   flex
                   h-7
@@ -120,7 +136,12 @@ export default function ProductCard({
               </span>
 
               <button
-                onClick={() => increaseQuantity(product.id)}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  increaseQuantity(product.id);
+                }}
                 className="
                   flex
                   h-7

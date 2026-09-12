@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/data/products";
-import { ProductType } from "../ui/ProductCard";
+import { ProductType } from "@/types/products.type";
 
 export default function PairWith({
   product,
@@ -39,7 +39,7 @@ export default function PairWith({
             key={item.id}
             className="group"
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#f5f2ec]">
+            <div className="relative aspect-4/5 overflow-hidden rounded-2xl bg-[#f5f2ec]">
               <Image
                 src={item.image}
                 alt={item.name}
