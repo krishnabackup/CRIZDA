@@ -1,6 +1,7 @@
 "use client";
 
 import { useCart } from "@/context/CartContext";
+import Link from "next/link";
 
 export default function CartSummary() {
   const { getCartTotal } = useCart();
@@ -64,9 +65,9 @@ export default function CartSummary() {
       )}
 
       {/* CHECKOUT */}
-      <button className="mt-5 w-full rounded-full bg-black px-5 py-3.5 text-sm font-medium text-white transition hover:opacity-90">
+      <Link href={'/checkout'}className="mt-5 w-full rounded-full bg-black px-5 py-3.5 text-sm font-medium text-white transition hover:opacity-90">
         Proceed to checkout
-      </button>
+      </Link>
 
       {/* DISCOUNTS */}
       <div className="mt-8">

@@ -25,10 +25,8 @@ Whether it’s something you’ve been looking for, something that solves a smal
        <section>
         <Container>
           <SectionHeading
-            title="What is CRIZDA."
-            description="At Crisda, we believe everyday life becomes a little more special with the right little things. We bring together a curated collection of unique, aesthetic, colorful, and playful objects designed to add personality to your space and joy to your everyday moments.
-
-Whether it’s something you’ve been looking for, something that solves a small need, or simply something that catches your eye and makes you smile Crisda is here to help you discover it. Because sometimes, you don’t need something big to make life feel better. You just need the right little thing.
+            title="Who is CRIZDA."
+            description="CRIZDA is a small e-commerce venture from Kerala, operated by KDEK, focused on bringing together a curated collection of unique, aesthetic, colorful, and playful products that add personality to everyday life. From useful everyday essentials to interesting little finds, CRIZDA aims to make discovering products that are practical, delightful, and a little different a simple and enjoyable experience. As a growing local business, we believe that sometimes you don’t need something big to make life feel better—you just need the right little thing.
 "
           />
         </Container>

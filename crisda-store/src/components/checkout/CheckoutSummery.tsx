@@ -1,13 +1,15 @@
 "use client";
 
 import { useCart } from "@/context/CartContext";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export default function CheckoutSummary() {
   const {
     cartItems,
     getCartTotal,
   } = useCart();
-
+const router = useRouter();
   const subtotal = getCartTotal();
 
   const discount = 300;
@@ -15,7 +17,15 @@ export default function CheckoutSummary() {
   const delivery = 0;
 
   const total = subtotal - discount + delivery;
-
+  const handleSubmit = () => {
+    toast.success("Order Places" , {
+  style: {
+    background: "#10b981",
+    color: "white",
+    border: "1px solid #10b981",
+  }},)
+    router.push("/products")
+  }
   return (
     <aside className="rounded-3xl bg-(--color-surface) p-6 md:p-8 lg:sticky lg:top-24">
 
@@ -109,7 +119,7 @@ export default function CheckoutSummary() {
         </div>
       )}
 
-      <button className="mt-5 w-full rounded-full bg-black px-5 py-4 text-sm font-medium text-white transition hover:opacity-90 active:scale-[0.99]">
+      <button className="mt-5 w-full rounded-full bg-black px-5 py-4 text-sm font-medium text-white transition hover:opacity-90 active:scale-[0.99]" onClick={handleSubmit}>
         Place order
       </button>
 

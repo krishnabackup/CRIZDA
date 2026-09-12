@@ -22,7 +22,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 text-lg text-[#5B4839]">
-            Buy Buetifuly crafted aestetically pleasing crafts
+            Buy Beautifully crafted aesthetically pleasing crafts
           </p>
           <div className='mt-10'>
           <Link href={'/products'} className="mt-6 rounded-lg text-white bg-[#A05E38] px-6 py-3">
