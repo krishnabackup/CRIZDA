@@ -1,10 +1,10 @@
 "use client";
 
+import { ProductCard } from "@/types/products.type";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
-import { ProductCard } from "@/types/products.type";
 
 export default function ProductCard({
   product,

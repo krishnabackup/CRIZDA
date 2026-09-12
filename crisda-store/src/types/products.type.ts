@@ -19,11 +19,7 @@ export type ProductType = {
   reviewCount: number;
 };
 
-export type ProductCard = {
-   id: number;
-  name: string;
-  category: string;
-  collection: "best-seller" | "hyped" | "value-for-money";
-  price: number;
-  image: string;
-}
+export type ProductCard = Pick<
+  ProductType,
+  "id" | "name" | "category" | "collection" | "price" | "image" | "stock"
+>;

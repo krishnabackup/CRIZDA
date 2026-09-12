@@ -95,7 +95,7 @@ export default function Shop() {
       <h2 className='text-lg sm:text-xl lg:text-2xl '>Inventory</h2>
       </div>
       </Container> 
-      <section>
+      <section className='mt-5'>
         <Container y='10'>
            <div className="mb-4 f w-full ">
             <button
@@ -173,7 +173,7 @@ export default function Shop() {
                   <div className="grid grid-cols-2 gap-4 p-3 sm:grid-cols-3 md:grid-cols-4">
                     {
                       products.map(product => (
-                        <ProductCard key={product.id} product={{id : product.id , image : product.image ,category:product.category ,collection: product.collection as 'best-seller' | 'hyped' | 'value-for-money', name: product.name , price : product.price}}/>
+                        <ProductCard key={product.id} product={{id : product.id , image : product.image ,category:product.category ,collection: product.collection as 'best-seller' | 'hyped' | 'value-for-money', name: product.name , price : product.price , stock: Number(product.stock)}}/>
                       ))
 }
 
