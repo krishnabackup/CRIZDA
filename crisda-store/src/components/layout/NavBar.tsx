@@ -26,7 +26,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/shop"
+            href="/products"
             className="text-sm text-(--color-foreground) transition hover:text-(--color-primary)"
           >
             Shop
