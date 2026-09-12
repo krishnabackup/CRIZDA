@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function PaymentMethod() {
+export default function Payment() {
   const [payment, setPayment] = useState("upi");
 
   const methods = [

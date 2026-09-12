@@ -2,7 +2,8 @@ export default function OrderForm() {
   return (
     <section className="rounded-3xl bg-(--color-surface) p-6 md:p-8">
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 justify-between">
+        <div className="flex gap-2 items-center">
         <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black text-xs text-white">
           01
         </span>
@@ -10,6 +11,10 @@ export default function OrderForm() {
         <h2 className="text-lg font-medium">
           Delivery details
         </h2>
+        </div>
+        <button className="bg-black text-white p-2 rounded-md">
+            Use Recent
+        </button>
       </div>
 
       <div className="mt-6 grid gap-4">

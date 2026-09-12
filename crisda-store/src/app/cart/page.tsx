@@ -14,8 +14,7 @@ export default function CartPage() {
     <>
     <Navbar/>
     <Container>
-      <div className="mb-8">
-
+      <div className="mb-8 mt-5">
         <h1 className="mt-2 text-3xl font-medium md:text-4xl">
           Cart
         </h1>
