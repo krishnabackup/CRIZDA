@@ -5,6 +5,7 @@ import CartSummary from "@/components/cart/CartSummary";
 import Container from "@/components/Container";
 import Navbar from "@/components/layout/NavBar";
 import { useCart } from "@/context/CartContext";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function CartPage() {
@@ -25,19 +26,16 @@ export default function CartPage() {
       </div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_360px] lg:items-start">
-        {/* LEFT */}
         <section className="space-y-4">
           {cartItems.length === 0 ? (
-            <div className="rounded-3xl bg-(--color-surface) p-10 text-center">
+            <div className="rounded-3xl bg-(--color-surface) p-10 text-center flex flex-col items-center gap-2">
               <h2 className="text-xl font-medium">
                 Your cart is empty
               </h2>
-              <span>
               <p className="mt-2 text-sm text-(--color-muted)">
                 Find something beautiful for your space.
               </p>
-              <Link href={'/products'}>Shop</Link>
-              </span>
+              <Link href={'/products'} className="flex">Shop <ArrowRight/></Link>
             </div>
           ) : (
             cartItems.map((item) => (
