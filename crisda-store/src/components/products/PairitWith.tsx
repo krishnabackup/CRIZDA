@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/data/products";
-import { ProductType } from "@/types/products.type";
+import type { ProductType } from "@/types/products.type";
 
 export default function PairWith({
   product,

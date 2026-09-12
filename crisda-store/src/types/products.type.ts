@@ -19,7 +19,7 @@ export type ProductType = {
   reviewCount: number;
 };
 
-export type ProductCard = Pick<
+export type ProductCardType = Pick<
   ProductType,
   "id" | "name" | "category" | "collection" | "price" | "image" | "stock"
 >;
