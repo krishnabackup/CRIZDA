@@ -6,7 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useCallback } from "react";
 
-import { products } from "@/data/products";
+import { products } from "@/data/products.local";
 
 export default function MostUsedItems() {
   const [emblaRef, emblaApi] = useEmblaCarousel({

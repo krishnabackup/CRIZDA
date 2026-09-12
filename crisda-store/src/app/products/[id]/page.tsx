@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import Navbar from "@/components/layout/NavBar";
-import { products } from "@/data/products";
+import { products } from "@/data/products.local";
 
 import ProductGallery from "@/components/products/ProductGallery";
 import ProductReviewSummary from "@/components/products/ProductReviewSummary";

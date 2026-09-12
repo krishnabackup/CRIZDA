@@ -12,7 +12,7 @@ import Navbar from "@/components/layout/NavBar";
 import Container from "@/components/Container";
 import FilterBox from "@/components/shop/FilterBox";
 import ProductCard from "@/components/ui/ProductCard";
-import { products } from "@/data/products";
+import { products } from "@/data/products.local";
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] =
