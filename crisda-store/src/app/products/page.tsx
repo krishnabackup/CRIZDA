@@ -38,9 +38,7 @@ export default function Products() {
     emblaApi.scrollNext();
   }, [emblaApi]);
 
-  /*
-   * Filter products for the HYPED section
-   */
+  
   const hypedProducts = products.filter(
     (product) => product.collection === "hyped"
   );
@@ -49,9 +47,7 @@ export default function Products() {
     new Set(products.map((product) => product.category))
   );
 
-  /*
-   * Filter products for the main inventory
-   */
+
   const normalizedSearchTerm = searchTerm.trim().toLowerCase();
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
@@ -100,23 +96,18 @@ export default function Products() {
       <Navbar onSearch={handleSearch} />
 
       <main>
-        {/* =====================================================
-            SHOP HEADER
-        ====================================================== */}
-        <Container>
-          <div className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center">
+        
+        <Container y="0">
+          <div className="flex flex-col gap-4 py-4 sm:flex-row sm:items-center">
             <FilterBox />
 
             <h2 className="text-lg sm:text-xl lg:text-2xl">Inventory</h2>
           </div>
         </Container>
 
-        {/* =====================================================
-            HYPED PRODUCTS CAROUSEL
-        ====================================================== */}
-        <section className="mt-5">
-          <Container>
-            {/* Section heading */}
+        <section>
+          <Container y="0">
+    
             <div className="mb-5 flex w-full items-center justify-between">
               <button
                 type="button"
@@ -136,7 +127,6 @@ export default function Products() {
                 HYPED
               </button>
 
-              {/* Desktop / Tablet buttons */}
               <div className="hidden gap-2 sm:flex">
                 <button
                   type="button"
@@ -182,16 +172,11 @@ export default function Products() {
               </div>
             </div>
 
-            {/* =================================================
-                EMBLA VIEWPORT
-            ================================================== */}
+           
             <div
               ref={emblaRef}
               className="min-w-0 overflow-hidden"
             >
-              {/* =================================================
-                  EMBLA TRACK
-              ================================================== */}
               <div className="-ml-3 flex touch-pan-y sm:-ml-4">
                 {hypedProducts.map((product) => (
                   <div
@@ -210,7 +195,7 @@ export default function Products() {
                     "
                   >
                     <article className="group">
-                      {/* Product image */}
+                    
                       <div className="relative aspect-4/5 overflow-hidden rounded-2xl bg-neutral-100">
                         <Image
                           src={product.image}
@@ -269,9 +254,6 @@ export default function Products() {
               </div>
             </div>
 
-            {/* =================================================
-                MOBILE CONTROLS
-            ================================================== */}
             <div className="mt-6 flex items-center justify-between sm:hidden">
               <p className="text-xs text-neutral-400">
                 Swipe to explore
@@ -320,9 +302,7 @@ export default function Products() {
           </Container>
         </section>
 
-        {/* =====================================================
-            INVENTORY
-        ====================================================== */}
+    
         <section id="product-list" className="scroll-mt-24">
           <Container>
             <div className="py-8">
@@ -344,7 +324,6 @@ export default function Products() {
                 ))}
               </div>
 
-              {/* Product grid */}
               <div
                 className="
                   mt-6
