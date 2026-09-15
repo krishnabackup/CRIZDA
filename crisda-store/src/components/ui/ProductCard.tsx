@@ -170,7 +170,7 @@ export default function ProductCard({
         </h3>
 
         <p className="mt-2 text-sm text-(--color-muted)">
-          ${product.price}
+          ₹{product.price}
         </p>
       </div>
     </div>
